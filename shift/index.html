@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    shift
+    <h2>Откройте консоль для проверки задания</h2>
+
+    <script>
+        const arrShiftR = (arr, step) => {
+            const length = arr.length;
+            const newStep = (step > length) ? (step % length) : step;
+
+            return [...arr.slice(length - newStep), ...arr.slice(0, length - newStep)];
+        }
+
+        const arr = [1, 2, 3, 4, 5];
+        const step = 3;
+        console.log(`${arr} - Исходный массив, ${step} - сдвиг`)
+
+        let result = arrShiftR(arr, step);
+        console.log(`${result} - Результат`);
+    </script>
 </body>
 </html>
