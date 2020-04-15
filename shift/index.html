@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Функция сдвига элементов массива вправо на N шагов</h2>
     <p>(откройте консоль для проверки задания)</p>
 
     <script>
-        const arrShiftR = (arr, step) => {
-            const length = arr.length;
-            const newStep = (step > length) ? (step % length) : step;
+      const arrShiftR = (arr, step) => {
+        const length = arr.length;
+        const newStep = step > length ? step % length : step;
 
-            return [...arr.slice(length - newStep), ...arr.slice(0, length - newStep)];
-        }
+        return [...arr.slice(length - newStep), ...arr.slice(0, length - newStep)];
+      };
 
-        const arr = [1, 2, 3, 4, 5];
-        const step = 3;
-        console.log(`${arr} - Исходный массив, ${step} - сдвиг`)
+      const myArr = [1, 2, 3, 4, 5];
+      const myStep = 3;
+      console.log(`${myArr} - Исходный массив, ${myStep} - сдвиг`);
 
-        let result = arrShiftR(arr, step);
-        console.log(`${result} - Результат`);
+      let result = arrShiftR(myArr, myStep);
+      console.log(`${result} - Результат`);
     </script>
-</body>
+  </body>
 </html>
