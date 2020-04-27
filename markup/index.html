@@ -1,11 +1,131 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    markup
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy House</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="aside-menu-btn">
+            <label class="aside-menu-btn__btn">
+              <input class="aside-menu-btn__checkbox" type="checkbox" checked>
+              <span class="aside-menu-btn__label">Menu</span>
+            </label>
+          </div>
+
+          <a href="#" class="logo">
+            <span class="logo__title">Cozy House</span>
+            <span class="logo__subtitle">Shelter for pets</span>
+          </a>
+
+          <nav class="main-menu">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link main-menu__link--active" href="#">About</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Pets</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrap">
+      <div class="container">
+        <section class="main-content">
+          <main class="about">
+            <h1 class="page-heading about__heading">
+              About the shelter <br />
+              "Cozy House"
+            </h1>
+            <p class="paragraph about__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              efficitur blandit condimentum. Proin accumsan lorem vel gravida
+              fringilla. Suspendisse potenti. Mauris ut pulvinar nunc.
+            </p>
+            <p class="paragraph">
+              Donec consectetur, diam in porta tempus, urna ligula vestibulum
+              nibh, ac ornare felis justo nec leo. Praesent mattis nibh quis
+              ultrices pharetra. Morbi tempus at ante sit amet tristique.
+              Maecenas dignissim justo orci, in laoreet urna dapibus nec.
+              Praesent quis tortor faucibus, tristique ante vitae, dignissim
+              lorem. Sed at ligula et sem mattis gravida ac vel erat.
+            </p>
+          </main>
+
+          <aside class="aside-menu">
+            <ul class="aside-menu__list">
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/cat-food.png" />
+                  <span class="aside-menu-item__text">Pet food</span>
+                </a>
+              </li>
+
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img
+                    class="aside-menu-item__icon"
+                    src="./img/ambulance.png"
+                  />
+                  <span class="aside-menu-item__text">Transport</span>
+                </a>
+              </li>
+
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/ball.png" />
+                  <span class="aside-menu-item__text">Toys</span>
+                </a>
+              </li>
+
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/bowl.png" />
+                  <span class="aside-menu-item__text">Bowls</span>
+                </a>
+              </li>
+
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/cat.png" />
+                  <span class="aside-menu-item__text">Sleeping area</span>
+                </a>
+              </li>
+
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/leash.png" />
+                  <span class="aside-menu-item__text">Collars</span>
+                </a>
+              </li>
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/pills.png" />
+                  <span class="aside-menu-item__text">Vitamins</span>
+                </a>
+              </li>
+              <li class="aside-menu__item aside-menu-item">
+                <a class="aside-menu-item__link" href="#">
+                  <img class="aside-menu-item__icon" src="./img/syringe.png" />
+                  <span class="aside-menu-item__text">Medicines</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
