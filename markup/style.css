@@ -168,7 +168,7 @@ body {
           order: 1;
   min-height: 489px;
   padding: 0 15px;
-  background: bottom right url("./img/Pets.png") no-repeat;
+  background: bottom right url("./img/pets.png") no-repeat;
   background-size: 200px;
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .aside-menu-item__link::after {
-  content: '>';
+  content: ">";
   font-weight: bold;
   position: absolute;
   right: 7px;
@@ -303,7 +303,7 @@ body {
   color: #4c4c4c;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .aside-menu {
     width: auto;
   }
