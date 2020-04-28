@@ -35,12 +35,7 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 20px 0;
   min-height: 70px;
   margin-bottom: 60px;
   background: url("./img/header-background.png");
@@ -209,7 +204,7 @@ body {
 
 .aside-menu-btn__label {
   color: #f1cdb3aa;
-  outline: 1px solid #86868685;
+  border: 1px solid #868686;
   border-radius: 3px;
   padding: 10px 14px;
   -webkit-transition: -webkit-box-shadow 0.3s;
@@ -237,7 +232,7 @@ body {
 }
 
 .aside-menu-btn__checkbox:checked + .aside-menu-btn__label {
-  outline: 2px solid #f1cdb3ff;
+  border: 1px solid #f1cdb3;
   color: #f1cdb3;
 }
 
@@ -277,6 +272,7 @@ body {
   font-weight: bold;
   position: absolute;
   right: 7px;
+  top: 25px;
   visibility: hidden;
   color: #f1cdb3;
 }
@@ -334,7 +330,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 10px 0;
     position: relative;
   }
   .main-menu__list {
@@ -347,6 +342,16 @@ body {
     position: absolute;
     left: 0px;
     top: 45%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {
+  /* стили только для IE10 и 11 */
+  .header {
+    min-height: 130px;
+  }
+  .main-menu {
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -53,7 +53,7 @@
 .aside-menu-btn {
   &__label {
     color: #f1cdb3aa;
-    outline: 1px solid #86868685;
+    border: 1px solid #868686;
     border-radius: 3px;
     padding: 10px 14px;
     transition: box-shadow 0.3s;
@@ -74,7 +74,7 @@
   }
 
   &__checkbox:checked + &__label {
-    outline: 2px solid #f1cdb3ff;
+    border: 1px solid #f1cdb3;
     color: #f1cdb3;
 
     &:hover {
@@ -104,6 +104,7 @@
       font-weight: bold;
       position: absolute;
       right: 7px;
+      top: 25px;
       visibility: hidden;
       color: #f1cdb3;
     }
@@ -164,7 +165,6 @@
   .header-content {
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
     position: relative;
   }
 
@@ -182,3 +182,14 @@
     top: 45%;
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {  
+  /* стили только для IE10 и 11 */
+  .header {
+    min-height: 130px;
+  }
+
+  .main-menu {
+    margin-top: 50px;
+  }
+} 

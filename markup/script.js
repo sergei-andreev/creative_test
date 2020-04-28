@@ -2,7 +2,7 @@ const asideMenu = document.querySelector('.aside-menu');
 const toggler = document.querySelector('.aside-menu-btn__checkbox');
 let needWatch = true;
 
-const initAsideMenu = () => {
+function initAsideMenu () {
     const width = document.body.clientWidth;
     if (width < 1200) {
         asideMenu.classList.add('aside-menu--hidden');
@@ -10,11 +10,11 @@ const initAsideMenu = () => {
     }    
 
     toggleMenuHandler();
-    resizeHandler();
+    resizeWindowHandler();
 }
 
-const toggleMenuHandler = () => {
-    toggler.addEventListener('change', () => {
+function toggleMenuHandler () {
+    toggler.addEventListener('change', function () {
         needWatch = false;
 
         if (!toggler.checked) {
@@ -25,10 +25,8 @@ const toggleMenuHandler = () => {
     });
 };
 
-const resizeHandler = () => {
-    // let isWidthLess = document.body.clientWidth < 1200 ? true : false;
-
-    window.addEventListener('resize', () => {
+function resizeWindowHandler () {
+    window.addEventListener('resize', function () {
         if (document.body.clientWidth >= 1200 && needWatch) {
             toggler.checked = true;
             asideMenu.classList.remove('aside-menu--hidden');
