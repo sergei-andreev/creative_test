@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    checkboxes
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <ul class="list">
+        <li class="card">
+          <img
+            id="bender-img"
+            class="card__img"
+            src="./images/icon-bender.svg"
+            alt="Бендер Сгибальщик Родригес"/>
+        </li>
+        <li class="card">
+          <img
+            id="dart-img"
+            class="card__img"
+            src="./images/icon-dart.svg"
+            alt="Дарт Вейдер"/>
+        </li>
+        <li class="card">
+          <img
+            id="gomer-img"
+            class="card__img"
+            src="./images/icon-gomer.svg"
+            alt="Гомер Симпсон"/>
+        </li>
+        <li class="card">
+          <img
+            id="wolter-img"
+            class="card__img"
+            src="./images/icons-wolter.svg"
+            alt="Уолтер Уайт"/>
+        </li>
+      </ul>
+
+      <div class="checkboxes">
+        <label class="checkbox">
+          <input id="bender-input" class="checkbox__input" type="checkbox" checked />
+          <span>Бендер Сгибальщик Родригес</span>
+        </label>
+
+        <label class="checkbox">
+          <input id="dart-input" class="checkbox__input" type="checkbox" checked />
+          <span>Дарт Вейдер</span>
+        </label>
+
+        <label class="checkbox">
+          <input id="gomer-input" class="checkbox__input" type="checkbox" checked />
+          <span>Гомер Симпсон</span>
+        </label>
+
+        <label class="checkbox">
+          <input id="wolter-input" class="checkbox__input" type="checkbox" checked />
+          <span>Уолтер Уайт</span>
+        </label>
+
+        <label class="checkbox">
+          <input id="all-input" class="checkbox__input" type="checkbox" checked />
+          <span>Все</span>
+        </label>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

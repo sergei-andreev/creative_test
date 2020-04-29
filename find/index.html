@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    find
-</body>
+  </head>
+  <body>
+    <h2>
+      Функция нахождения самой длинной общей последовательности из 2-ух строк
+    </h2>
+    <p>(откройте консоль для проверки задания)</p>
+
+    <script>
+      const strBreaker = (str) => {
+        const arr = [];
+        for (let i = 0; i < str.length; i += 1) {
+          for (let j = i + 1; j <= str.length; j += 1) {
+            arr.push(str.slice(i, j));
+          }
+        }
+
+        // Возвращаем уникальный массив отсортированный по убыванию для уменьшения итераций при сравнении
+        return Array.from(new Set(arr)).sort((a, b) => b.length - a.length);
+      };
+
+      const findMaxMatch = ([str1, str2]) => {
+        const isFirstShort = str1.length < str2.length;
+        // Находим строку, которая короче, для меньшего количества итераций при разбивке
+        const allComb = isFirstShort ? strBreaker(str1) : strBreaker(str2);
+        const str = isFirstShort ? str2 : str1;
+
+        for (let comb of allComb) {
+          if (str.match(comb)) {
+            return `${comb} - Самое длинное совпадение`;
+          }
+        }
+
+        return "Совпадений не найдено";
+      };
+
+      const arrayOfStrings = ["aababba", "abbaabcd"];
+      console.log(`[${arrayOfStrings}] - Входной массив`);
+
+      const result = findMaxMatch(arrayOfStrings);
+      console.log(result);
+    </script>
+  </body>
 </html>

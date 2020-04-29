@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 840px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    border: 1px solid #00000020;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 5px 5px #00000020;
+    transition: box-shadow 0.4s;
+}
+
+.card:hover {
+    box-shadow: none;
+}
+
+.card:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card__img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    padding: 10px 20px;
+    border: 1px solid #00000020;
+    border-radius: 3px;
+    box-shadow: 0px 5px 5px #00000020;
+}
+
+.checkbox:last-child {
+    border-top: 1px solid #00000020;
+    padding-top: 10px;
+}
+
+.checkbox:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.checkbox__input {
+    margin-right: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
